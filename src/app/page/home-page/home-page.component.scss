@@ -1,0 +1,22 @@
+.row{
+    --bs-gutter-x: 0rem !important;
+    
+}
+.background-image {
+    background-image: url("https://bizweb.dktcdn.net/100/485/241/themes/911577/assets/background_module.png?1688630334113");
+    background-size: cover;
+    background-position: center;
+    background-color: #f3eee4;
+    padding: 40px 0 30px;
+    margin-bottom: 40px; /* Chiều cao của phần tử */
+}
+
+
+  .nav-link {
+    color: black;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    color: brown;
+}

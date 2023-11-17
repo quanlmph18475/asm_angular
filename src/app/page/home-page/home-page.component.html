@@ -1,0 +1,288 @@
+<section class="">
+    <div class="banner w-full text-center">
+        <a href="https://imgur.com/erzULoI"><img src="https://i.imgur.com/erzULoI.jpg" width="1240" height="300"
+                title="source: imgur.com" /></a>
+    </div>
+    <div class="row text-center">
+        <div class="col">
+            <img class="rounded-circle mt-4"
+                src="//bizweb.dktcdn.net/100/485/241/themes/911577/assets/danhmuc_1.jpg?1688630469540" width="160"
+                height="160" alt="">
+            <p class="mt-2 h5">Nồi sứ dưỡng sinh</p>
+            <p>+ 0 sản phẩm</p>
+        </div>
+        <div class="col">
+            <img class="rounded-circle mt-4"
+                src="//bizweb.dktcdn.net/100/485/241/themes/911577/assets/danhmuc_2.jpg?1688630469540" width="160"
+                height="160" alt="">
+            <p class="mt-2 h5">Phòng ăn</p>
+            <p>+ 20 sản phẩm</p>
+        </div>
+        <div class="col">
+            <img class="rounded-circle mt-4"
+                src="//bizweb.dktcdn.net/100/485/241/themes/911577/assets/danhmuc_3.jpg?1688630469540" width="160"
+                height="160" alt="">
+            <p class="mt-2 h5">Sứ dưỡng sinh</p>
+            <p>+ 25 sản phẩm</p>
+        </div>
+        <div class="col">
+            <img class="rounded-circle mt-4"
+                src="//bizweb.dktcdn.net/100/485/241/themes/911577/assets/danhmuc_4.jpg?1688630469540" width="160"
+                height="160" alt="">
+            <p class="mt-2 h5">Trà - cà phê</p>
+            <p>+ 12 sản phẩm</p>
+        </div>
+        <div class="col">
+            <img class="rounded-circle mt-4"
+                src="//bizweb.dktcdn.net/100/485/241/themes/911577/assets/danhmuc_5.jpg?1688630469540" width="160"
+                height="160" alt="">
+            <p class="mt-2 h5">Phụ kiện bàn ăn</p>
+            <p>+ 30 sản phẩm</p>
+        </div>
+    </div>
+
+    <div class=" d-flex  justify-content-center my-4">
+        <div class="mx-3">
+            <img class="rounded-5" src="//bizweb.dktcdn.net/100/485/241/themes/911577/assets/banner1.png?1688630469540"
+                width="540" height="490" alt="">
+        </div>
+        <div class="mx-3">
+            <img class="rounded-5" src="//bizweb.dktcdn.net/100/485/241/themes/911577/assets/banner2.png?1688630469540"
+                width="540" height="490" alt="">
+        </div>
+    </div>
+
+    <div class="row mt-5 background-image">
+        <p class="fs-3 fw-bold  mt-2">
+            <span class="dot"></span>
+            Khuyến mãi đặc biệt
+        </p>
+
+        <div *ngFor="let product of products; index as i" class="col  border border-secondary rounded m-2">
+            <div class="text-center">
+                <a routerLink="product/{{product.id}}">
+                    <img class=" px-2 pt-2 rounded text-center " width="270" height="300" [src]=" product.imageUrl ">
+                </a>
+            </div>
+            <div class="mx-4">
+                <a class="text-decoration-none">
+                    <p class=" fs-5 fw-bold nav-link">{{ product.name }}</p>
+                </a>
+                <p class="text-danger rounded-2 text-lg-left h3 fw-bold">{{ product.price | currency : "VND" : "symbol"
+                    : "1.3-3" }}</p>
+                <del>200.000đ</del>
+            </div>
+        </div>
+
+        <!-- <div class="col  border border-secondary rounded m-2">
+            <div class="text-center">
+                <img class=" px-2 pt-2 rounded-lg text-center " width="270" height="300"
+                    src="//bizweb.dktcdn.net/thumb/large/100/485/241/products/untitled-2-03162065-80a1-4a78-b15c-1902bac875e1.png?v=1686285555017">
+            </div>
+            <div class="mx-4">
+                <p class=" fs-5 fw-bold nav-link">Bộ trà 0.35 L - IFP - Chỉ Vàng</p>
+                <p class="text-danger text-lg-left h3 fw-bold">300.000đ</p>
+                <del>500.000đ</del>
+            </div>
+        </div>
+        <div class="col  border border-secondary rounded m-2">
+            <div class="text-center">
+                <img class=" px-2 pt-2 rounded-lg text-center " width="270" height="300"
+                    src="https://bizweb.dktcdn.net/thumb/large/100/485/241/products/untitled-1.png?v=1686379422640">
+            </div>
+            <div class="mx-4">
+                <p class=" fs-5 fw-bold nav-link">Lọ Bud Vase trong Silver Spruce</p>
+                <p class="text-danger text-lg-left h3 fw-bold">240.000đ</p>
+                <del>650.000đ</del>
+            </div>
+        </div>
+        <div class="col  border border-secondary rounded m-2">
+            <div class="text-center">
+                <img class=" px-2 pt-2 rounded-lg text-center " width="270" height="300"
+                    src="//bizweb.dktcdn.net/thumb/large/100/485/241/products/untitled-2-81090e71-48b7-47f9-975e-cb2bd797df72.png?v=1686292147777">
+            </div>
+            <div class="mx-4">
+                <p class=" fs-5 fw-bold nav-link">Bát sâu trong Silver Spruce</p>
+                <p class="text-danger text-lg-left h3 fw-bold">600.000đ</p>
+                <del>800.000đ</del>
+            </div>
+        </div> -->
+    </div>
+
+ 
+
+</section>
+
+
+<div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div>
+        <div class="fs-3 fw-bold mx-3 mt-5">
+            <span class="dot"></span>
+            Set sản phẩm nổi bật
+        </div>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active  ">
+                <div class=" ">
+                    <div class=" d-flex justify-content-center border border-secondary rounded m-2 py-3 ">
+                        <div class="text-center rounded">
+                            <img class="px-2 pt-2  text-center" width="270" height="400"
+                                src="//bizweb.dktcdn.net/100/485/241/themes/911577/assets/image_set_1.png?1688630469540">
+                        </div>
+                        <div class="mx-4">
+                            <p class="fs-2 fw-bold nav-link">Set sản phẩm trang trí </p>
+                            <p>Bud Vase là một tác phẩm kinh điển của Edith Heath được thiết kế vào những năm 1980. Nó tạo nên một tác phẩm tĩnh vật tuyệt đẹp có hoặc không có hoa. Ở đây, nó được tráng men bằng kỹ thuật đặc biệt của Mùa Đông năm nay: Silver Spruce. Lớp tráng men bóng loáng này gợi nhớ đến những cành cây thường xanh phủ đầy sương giá. Có sẵn trong một thời gian giới hạn. 
+
+                                Gốm sứ luôn là một trong những sản phẩm truyền thống được yêu thích bởi khách hàng trên toàn thế giới. Với độ bền cao và tính thẩm mỹ, gốm sứ đã trở thành vật dụng không thể thiếu trong cuộc sống hằng ngày của mọi gia đình. Thật tuyệt vời khi một sản phẩm có thể vừa có tính nghệ thuật vừa mang lại lợi ích cho cuộc sống.</p>
+                            <p class="text-danger text-lg-left h3 fw-bold">13.00.000đ</p>
+                        </div>
+                    </div>
+                </div>
+          </div> 
+
+            <div class="carousel-item ">
+                    <div class=" d-flex justify-content-center border border-secondary rounded m-2 py-3">  
+                        <div class="">
+                            <img class="px-2 pt-2 rounded-2 " width="270" height="400"
+                                src="//bizweb.dktcdn.net/100/485/241/themes/911577/assets/image_set_2.png?1688630469540">
+                        </div>
+                        <div class="  mx-4 ">
+                            <p class="fs-2 fw-bold nav-link ">Set sản phẩm gia dụng</p>
+                            <p class="">Hoàng Cung là dãy sản phẩm c
+                                ao cấp của Minh Long, mang phong cách cung đì
+                                nh, vương tộc nhưng vẫn đậm đà hình ảnh văn hóa 
+                                dân gian Việt Nam. Sự sáng tạo nghệ thuật thể hiện ở từng
+                                 nét vẽ có tính thẩm mỹ riêng tạo nên phần hồn, chiều sâu văn hóa
+                                  của từng sản phẩm. Bộ trà Hồn Quê vàng tái hiện một khung cảnh làng
+                                   quê yên bình và trong trẻo đến vô ngần với những hình ảnh mang đậm 
+                                   bản sắc văn hóa Việt Nam như: lũy tre làng, cánh cò quê hương, cảnh
+                                    sinh hoạt làng quê... được điểm xuyết thêm vàng 24k sang trọng.</p>
+                            <p class="text-danger  h3 fw-bold">32.00.000đ</p>
+                        </div>
+                    </div>
+            </div>
+            
+            <div class="carousel-item ">
+                <div class=" d-flex justify-content-center border border-secondary rounded m-2 py-3">
+                    <div class="">
+                        <img class="px-2 pt-2 rounded-lg " width="270" height="400"
+                            src="//bizweb.dktcdn.net/100/485/241/themes/911577/assets/image_set_3.png?1688630469540">
+                    </div>
+                    <div class="mx-4">
+                        <p class="fs-2 fw-bold nav-link">Set ấm tách trà</p>
+                        <p>Những tách trà bằng sứ đẹp mắt, hoàn hảo để phục vụ cà phê espresso, cappuccino, lattes hoặc trà. Nó có đủ không gian cho cà phê với bọt sữa, tránh bị đổ.
+
+                            Món quà tốt nhất cho bạn bè, đồng nghiệp và sếp như sinh nhật, Lễ tạ ơn, quà Giáng sinh
+                            
+                            Không chì và không độc hại, giữ nhiệt tự nhiên để giữ ấm cà phê hoặc trà lâu hơn. Nên giặt tay, không an toàn trong lò vi sóng hoặc máy rửa chén
+                            
+                            Tuyệt vời hoàn hảo cho quà tặng sinh nhật, quà tặng Giáng sinh, quà tặng giáo viên, quà tặng ngày nhà giáo, quà tặng ngày lễ tình nhân, quà tặng ngày của mẹ, quà tặng tốt nghiệp
+                            
+                            Cốc cà phê rộng 4,1 inch (10,5 cm) x cao 2,4 inch (6 cm)
+                            
+                            Cốc cà phê Dung tích: 7,1 ounce (210 ml)
+                            
+                            Kích thước đĩa: 5,9 inch (15 cm) </p>
+                        <p class="text-danger text-lg-left h3 fw-bold">11.600.000đ</p>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+
+
+    <div class="row">
+        <div>
+            <div class="fs-3 fw-bold mx-3 mt-5">
+                <span class="dot"></span>
+                Sản phẩm nổi bật
+            </div>
+        </div>
+        <div class="col  border border-secondary rounded m-2">
+            <div class="text-center">
+                <img class=" px-2 pt-2 rounded-lg text-center " width="270" height="300"
+                    src="//bizweb.dktcdn.net/thumb/large/100/485/241/products/untitled-2-03162065-80a1-4a78-b15c-1902bac875e1.png?v=1686285555017">
+            </div>
+            <div class="mx-4">
+                <p class=" fs-5 fw-bold nav-link">Bộ trà 0.35 L - IFP - Chỉ Vàng</p>
+                <p class="text-danger text-lg-left h3 fw-bold">300.000đ</p>
+
+            </div>
+        </div>
+        <div class="col  border border-secondary rounded m-2">
+            <div class="text-center">
+                <img class=" px-2 pt-2 rounded-lg text-center " width="270" height="300"
+                    src="https://bizweb.dktcdn.net/thumb/large/100/485/241/products/untitled-1.png?v=1686379422640">
+            </div>
+            <div class="mx-4">
+                <p class=" fs-5 fw-bold nav-link">Lọ Bud Vase trong Silver Spruce</p>
+                <p class="text-danger text-lg-left h3 fw-bold">240.000đ</p>
+
+            </div>
+        </div>
+        <div class="col  border border-secondary rounded m-2">
+            <div class="text-center">
+                <img class=" px-2 pt-2 rounded-lg text-center " width="270" height="300"
+                    src="//bizweb.dktcdn.net/thumb/large/100/485/241/products/untitled-2-81090e71-48b7-47f9-975e-cb2bd797df72.png?v=1686292147777">
+            </div>
+            <div class="mx-4">
+                <p class=" fs-5 fw-bold nav-link">Bát sâu trong Silver Spruce</p>
+                <p class="text-danger text-lg-left h3 fw-bold">600.000đ</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="myCarousel" class="carousel slide mt-3" data-ride="carousel">
+
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+
+        <div class="carousel-inner text-center ">
+            <div class="carousel-item active   ">
+                <a><img src="https://i.imgur.com/2OJ2lZF.jpg" width="1240" height="391" title="source: imgur.com" /></a>
+                <div class=" ">
+
+                </div>
+            </div>
+            <div class="carousel-item">
+
+                <a href="https://imgur.com/wlaXmqD"><img src="https://i.imgur.com/wlaXmqD.png" width="1240" height="391"
+                        title="source: imgur.com" /></a>
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="https://imgur.com/eB0NYYV"><img src="https://i.imgur.com/eB0NYYV.png" width="1240" height="391"
+                        title="source: imgur.com" /></a>
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+        </div>
+
+
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+            <span class="sr-only text-dark">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <footer>
+
+    </footer>
